@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/walletsFragment">
+
+    <fragment
+        android:id="@+id/walletsFragment"
+        android:name="com.toucanpay.ui.components.wallets.WalletsFragment"
+        android:label="WalletsFragment"
+        tools:layout="@layout/fragment_wallets">
+        <action
+            android:id="@+id/navigateToWalletDetailsFragment"
+            app:destination="@id/walletDetailsFragment" />
+        <action
+            android:id="@+id/navigateToTradeFragment"
+            app:destination="@id/tradeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.toucanpay.ui.components.messages.MessagesFragment"
+        android:label="MessagesFragment"
+        tools:layout="@layout/fragment_messages">
+        <action
+            android:id="@+id/navigateToNewMessageFragment"
+            app:destination="@id/newMessageFragment" />
+        <action
+            android:id="@+id/navigateToMessagesThreadFragment"
+            app:destination="@id/messagesThreadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.toucanpay.ui.components.scanner.ScannerFragment"
+        android:label="ScannerFragment"
+        tools:layout="@layout/fragment_scanner" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.toucanpay.ui.components.account.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/navigateToAuthorizeFragment"
+            app:destination="@id/authorizeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.toucanpay.ui.components.signup.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/navigateToLogInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/navigateToVerifyDialog"
+            app:destination="@id/verifyDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.toucanpay.ui.components.signin.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/navigateToClaimBonusFragment"
+            app:destination="@id/claimBonusFragment"
+            app:popUpTo="@id/main_graph" />
+        <action
+            android:id="@+id/navigateToResetPinDialog"
+            app:destination="@id/resetPinDialog" />
+        <action
+            android:id="@+id/navigateToLogInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+
+    <action
+        android:id="@+id/showWalletsFragment"
+        app:destination="@id/walletsFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/showSwapsFragment"
+        app:destination="@id/swapsFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/showScannerFragment"
+        app:destination="@id/scannerFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/showMessagesFragment"
+        app:destination="@id/messagesFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/showAccountFragment"
+        app:destination="@id/accountFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/showSignUpFragment"
+        app:destination="@id/signUpFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/showVerifyFragment"
+        app:destination="@id/verifyFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/showSignInFragment"
+        app:destination="@id/signInFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_graph"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/claimBonusFragment"
+        android:name="com.toucanpay.ui.components.claimbonus.ClaimBonusFragment"
+        android:label="ClaimBonusFragment"
+        tools:layout="@layout/fragment_claim_bonus">
+        <action
+            android:id="@+id/navigateToClaimBonusSuccessFragment"
+            app:destination="@id/claimBonusSuccessFragment"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.toucanpay.ui.components.login.LogInFragment"
+        android:label="LogInFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/navigateToClaimBonusFragment"
+            app:destination="@id/claimBonusFragment"
+            app:popUpTo="@id/main_graph" />
+        <action
+            android:id="@+id/navigateToForgotPinDialog"
+            app:destination="@id/forgotPinDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyFragment"
+        android:name="com.toucanpay.ui.components.verify.VerifyFragment"
+        android:label="VerifyFragment"
+        tools:layout="@layout/fragment_verify">
+        <action
+            android:id="@+id/navigateToLogInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/main_graph" />
+        <action
+            android:id="@+id/navigateToSignInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/swapsFragment"
+        android:name="com.toucanpay.ui.components.swaps.SwapsFragment"
+        android:label="SwapsFragment"
+        tools:layout="@layout/fragment_swaps">
+        <action
+            android:id="@+id/navigateToSwapRequestErrorDialog"
+            app:destination="@id/swapRequestErrorDialog" />
+        <action
+            android:id="@+id/navigateToSwapRequestSuccessDialog"
+            app:destination="@id/swapRequestSuccessDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/newMessageFragment"
+        android:name="com.toucanpay.ui.components.newmessage.NewMessageFragment"
+        android:label="NewMessageFragment"
+        tools:layout="@layout/fragment_new_message">
+        <action
+            android:id="@+id/navigateToMessagesThreadFragment"
+            app:destination="@id/messagesThreadFragment"
+            app:popUpTo="@id/messagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesThreadFragment"
+        android:name="com.toucanpay.ui.components.messagesthread.MessagesThreadFragment"
+        android:label="MessagesThreadFragment"
+        tools:layout="@layout/fragment_messages_thread">
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/authorizeFragment"
+        android:name="com.toucanpay.ui.components.authorize.AuthorizeFragment"
+        android:label="AuthorizeFragment"
+        tools:layout="@layout/fragment_authorize">
+        <action
+            android:id="@+id/navigateToEnterPINDialog"
+            app:destination="@id/enterPINDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/resetPinDialog"
+        android:name="com.toucanpay.ui.components.resetpindialog.ResetPinDialog"
+        android:label="ResetPinDialog"
+        tools:layout="@layout/dialog_reset_pin">
+        <action
+            android:id="@+id/navigateToChangePinFragment"
+            app:destination="@id/changePinFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/changePinFragment"
+        android:name="com.toucanpay.ui.components.changepin.ChangePinFragment"
+        android:label="ChangePinFragment"
+        tools:layout="@layout/fragment_change_pin">
+        <action
+            android:id="@+id/navigateToSignInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <dialog
+        android:id="@+id/verifyDialog"
+        android:name="com.toucanpay.ui.components.verifydialog.VerifyDialog"
+        android:label="VerifyDialog"
+        tools:layout="@layout/dialog_verify">
+        <action
+            android:id="@+id/navigateToVerifyFragment"
+            app:destination="@id/verifyFragment"
+            app:popUpTo="@+id/main_graph" />
+    </dialog>
+    <fragment
+        android:id="@+id/walletDetailsFragment"
+        android:name="com.toucanpay.ui.components.walletdetails.WalletDetailsFragment"
+        android:label="WalletDetailsFragment"
+        tools:layout="@layout/fragment_wallet_details">
+        <argument
+            android:name="balance"
+            app:argType="com.toucanpay.data.models.Balance" />
+    </fragment>
+    <fragment
+        android:id="@+id/claimBonusSuccessFragment"
+        android:name="com.toucanpay.ui.components.claimbonussuccess.ClaimBonusSuccessFragment"
+        android:label="ClaimBonusSuccessFragment"
+        tools:layout="@layout/fragment_claim_bonus_success">
+        <argument
+            android:name="reward"
+            app:argType="com.toucanpay.data.models.Reward" />
+    </fragment>
+    <dialog
+        android:id="@+id/forgotPinDialog"
+        android:name="com.toucanpay.ui.components.forgotpindialog.ForgotPinDialog"
+        android:label="ForgotPinDialog"
+        tools:layout="@layout/dialog_reset_pin" />
+    <fragment
+        android:id="@+id/tradeFragment"
+        android:name="com.toucanpay.ui.components.trade.TradeFragment"
+        android:label="TradeFragment"
+        tools:layout="@layout/fragment_trade">
+        <action
+            android:id="@+id/navigateToTokenPickerFragment"
+            app:destination="@id/tokenPickerFragment" />
+        <action
+            android:id="@+id/navigateToSendScannerFragment"
+            app:destination="@id/sendScannerFragment" />
+        <action
+            android:id="@+id/navigateToTradeTokensSuccess"
+            app:destination="@id/tradeTokensSuccessFragment" />
+        <action
+            android:id="@+id/navigateToTradeTokensError"
+            app:destination="@id/tradeTokensErrorFragment" />
+        <action
+            android:id="@+id/navigateToRequestScannerFragment"
+            app:destination="@id/requestScannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tokenPickerFragment"
+        android:name="com.toucanpay.ui.components.tokenpicker.TokenPickerFragment"
+        android:label="TokenPickerFragment"
+        tools:layout="@layout/fragment_token_picker" />
+    <fragment
+        android:id="@+id/sendScannerFragment"
+        android:name="com.toucanpay.ui.components.sendscanner.SendScannerFragment"
+        android:label="SendScannerFragment"
+        tools:layout="@layout/fragment_send_scanner">
+        <action
+            android:id="@+id/navigateToTradeTokensSuccess"
+            app:destination="@id/tradeTokensSuccessFragment"
+            app:popUpTo="@id/tradeFragment" />
+        <action
+            android:id="@+id/navigateToTradeTokensError"
+            app:destination="@id/tradeTokensErrorFragment"
+            app:popUpTo="@id/tradeFragment" />
+        <argument
+            android:name="tradeInputData"
+            app:argType="com.toucanpay.ui.model.TradeInputData" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestScannerFragment"
+        android:name="com.toucanpay.ui.components.requestscanner.RequestScannerFragment"
+        android:label="RequestScannerFragment"
+        tools:layout="@layout/fragment_request_scanner">
+        <action
+            android:id="@+id/navigateToTradeTokensError"
+            app:destination="@id/tradeTokensErrorFragment"
+            app:popUpTo="@id/tradeFragment" />
+        <action
+            android:id="@+id/navigateToTradeTokensSuccess"
+            app:destination="@id/tradeTokensSuccessFragment"
+            app:popUpTo="@id/tradeFragment" />
+        <argument
+            android:name="tradeInputData"
+            app:argType="com.toucanpay.ui.model.TradeInputData" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeTokensErrorFragment"
+        android:name="com.toucanpay.ui.components.tradetokenserror.TradeTokensErrorFragment"
+        android:label="TradeTokensErrorFragment"
+        tools:layout="@layout/fragment_trade_tokens_error">
+        <argument
+            android:name="errorMessage"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeTokensSuccessFragment"
+        android:name="com.toucanpay.ui.components.tradetokenssuccess.TradeTokensSuccessFragment"
+        android:label="TradeTokensSuccessFragment"
+        tools:layout="@layout/fragment_trade_tokens_success">
+        <argument
+            android:name="inputData"
+            app:argType="com.toucanpay.ui.model.TradeInputData" />
+        <argument
+            android:name="isSendSuccess"
+            app:argType="boolean" />
+    </fragment>
+    <dialog
+        android:id="@+id/swapRequestErrorDialog"
+        android:name="com.toucanpay.ui.components.swaprequesterror.SwapRequestErrorDialog"
+        android:label="SwapRequestErrorDialog"
+        tools:layout="@layout/dialog_error_swap_request">
+        <argument
+            android:name="swapError"
+            app:argType="com.toucanpay.ui.model.SwapError" />
+    </dialog>
+    <dialog
+        android:id="@+id/swapRequestSuccessDialog"
+        android:name="com.toucanpay.ui.components.swaprequestsuccess.SwapRequestSuccessDialog"
+        android:label="SwapRequestSuccessDialog"
+        tools:layout="@layout/dialog_success_swap_request">
+        <argument
+            android:name="swapSuccess"
+            app:argType="com.toucanpay.ui.model.SwapSuccess" />
+    </dialog>
+    <dialog
+        android:id="@+id/enterPINDialog"
+        android:name="com.toucanpay.ui.components.enterPINdialog.EnterPINDialog"
+        android:label="EnterPINDialog"
+        tools:layout="@layout/dialog_enter_pin">
+        <action
+            android:id="@+id/navigateToAccountFragment"
+            app:destination="@id/accountFragment"
+            app:popUpTo="@id/main_graph" />
+    </dialog>
+</navigation>

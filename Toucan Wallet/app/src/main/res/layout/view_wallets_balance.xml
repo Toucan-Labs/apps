@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="10dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:alpha="0.4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_wallet_details_card"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tokenNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextH6b"
+        android:textColor="@color/whiteSecondary"
+        tools:text="Toucans" />
+
+    <TextView
+        android:id="@+id/tokenSymbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_token_symbol_empty"
+        android:paddingStart="16dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="6dp"
+        android:textAppearance="@style/TextH6b"
+        android:textColor="@color/whiteSecondary"
+        tools:text="2CAN" />
+
+    <TextView
+        android:id="@+id/amountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:textAppearance="@style/TextH6b"
+        android:textColor="@color/whiteSecondary"
+        tools:text="620.00" />
+</FrameLayout>

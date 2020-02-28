@@ -1,0 +1,148 @@
+<resources>
+
+    <string name="button_register">Register</string>
+    <string name="button_reset_pin">Reset PIN code</string>
+
+    <string name="validation_error_username_empty">Username not provided</string>
+    <string name="validation_error_username">Username should contain only lowercase letters, numbers and \"_\" symbol</string>
+    <string name="validation_error_username_length">Username should contain from 2 to 16 characters</string>
+    <string name="validation_error_username_email_empty">Username/Email not provided</string>
+    <string name="validation_error_email_empty">Email not provided</string>
+    <string name="validation_error_pin_empty">PIN not provided</string>
+    <string name="validation_error_old_pin_empty">Old PIN not provided</string>
+    <string name="validation_error_pin_to_short">PIN is too short</string>
+    <string name="validation_refer_code">Refer code is too short</string>
+    <string name="validation_error_pin_repeated_empty">PIN not repeated</string>
+    <string name="validation_error_pin_repeated_does_not_match">PIN does not match</string>
+    <string name="validation_error_same_user">You cannot send message to yourself</string>
+
+    <string name="sign_up_username_label">Username</string>
+    <string name="sign_up_email_label">Email</string>
+    <string name="sign_up_pin_label">Enter PIN code</string>
+    <string name="sign_up_pin_repeated_label">Repeat PIN code</string>
+    <string name="sign_up_referral_code">Enter referral code (optional):</string>
+    <string name="sign_up_title">Register for an account.</string>
+    <string name="sign_up_logo">TOUCAN LOYALTY\n&amp; REWARDS</string>
+    <string name="sign_up_verification_code">Enter Verification Code</string>
+    <string name="sign_up_verify_account_title">Verify Account</string>
+    <string name="sign_up_verify_inbox">We emailed you a verification code.\nPlease check your inbox!</string>
+    <string name="sign_up_verify_enter_code">Enter the verification code\n we sent to your email.</string>
+
+    <string name="sign_in_title">Good %s,\n %s!</string>
+    <string name="sign_in_pin_label">Enter PIN code</string>
+    <string name="sign_in_existing_account">Already have an account?  <b>Login</b></string>
+    <string name="sign_into_your_account">Login to your account</string>
+    <string name="sign_in_username_email">Username / Email</string>
+    <string name="log_in_button">Login</string>
+    <string name="log_in_forgot_pin">Forgot PIN?</string>
+    <string name="sign_in_register_button">Do not have an account? <b>Register</b></string>
+    <string name="sign_in_switch_user_button">Switch user</string>
+    <string name="sign_in_error_no_username">Error occurred</string>
+
+    <string name="message_token_empty">User unauthorized</string>
+    <string name="message_qr_code_not_recognized">QR code not recognized</string>
+
+    <string name="messages_title">Messages</string>
+    <string name="messages_empty_messages_list">You have no messages at the moment.\nClick + to create one.</string>
+    <string name="messages_empty_title">Sorry!</string>
+    <string name="messages_new_title">New Message</string>
+    <string name="messages_new_to">To:</string>
+    <string name="messages_username_hint">Enter username or scan QR code</string>
+    <string name="messages_button_text">Message</string>
+    <string name="message_hint_text">Type a message</string>
+    <string name="message_user_text">You</string>
+
+    <string name="wallets_title">Wallets</string>
+
+    <string name="token_picker_title">Token</string>
+
+    <string name="scanner_title">Scanner</string>
+    <string name="scanner_no_camera_permission">Missing camera permission</string>
+
+    <string name="account_title">Account</string>
+    <string name="account_authorize_button">Authorize</string>
+    <string name="account_referral_label">Your referral code:</string>
+
+    <string name="swaps_title">Offers</string>
+    <string name="swaps_receive_title">For</string>
+    <string name="swaps_send_title">Trade</string>
+    <string name="swaps_empty_list">You have no offers at the moment.\nPlease check back later!</string>
+    <string name="swaps_empty_list_title">Sorry!</string>
+    <string name="swaps_error_tokens">Error occurred</string>
+    <string name="swaps_reject_label">Reject</string>
+    <string name="swaps_accept_label">Accept</string>
+    <string name="swaps_invalid_adapter_position">Offer card should be visible in its entirety</string>
+    <string name="swaps_dialog_error_title">Sorry!</string>
+    <string name="swaps_dialog_success_title">Success!</string>
+    <string name="swaps_error_occurred">Error occurred</string>
+    <string name="swaps_cannot_find_trade">Can\'t find the trade</string>
+    <string name="swaps_request_success_title">Congratulations!</string>
+    <string name="swaps_error_not_enough">Not enough</string>
+    <string name="swaps_error_points">points</string>
+    <string name="swaps_error_to_accept">to accept this offer.</string>
+    <string name="swaps_success_you_swapped">You traded</string>
+    <string name="swaps_success_for">for</string>
+
+    <string name="claim_bonus_button">Claim bonus!</string>
+    <string name="claim_bonus_title">You earned a registration bonus.</string>
+    <string name="claim_bonus_no_wallets">Congratulations!</string>
+    <string name="claim_bonus_reward">No reward is due</string>
+    <string name="claim_bonus_check_wallet">Check your wallet</string>
+    <string name="claim_bonus_congratulation">Congratulations!</string>
+    <string name="claim_bonus_earn_text">You just earned</string>
+    <string name="claim_bonus_put_to_wallet">We have put them in your wallet.</string>
+
+    <string name="wallets_tab_1">Points</string>
+    <string name="wallets_tab_2">Directory</string>
+    <string name="wallets_tab_3">Rewards</string>
+    <string name="wallets_button_pos"></string>
+    <string name="wallets_button_back">Back to Wallets</string>
+
+    <string name="toucan_backend_url">https://supermoney-toucan.herokuapp.com/</string>
+
+    <string name="change_pin_title">Reset PIN</string>
+    <string name="reset_pin_inbox">We emailed you a new PIN.\nPlease check your inbox!</string>
+    <string name="reset_pin_close">Close</string>
+    <string name="reset_pin_description">Enter the PIN code we sent to your\nemail then recreate your own.</string>
+    <string name="reset_pin_email_label">Enter PIN code from e-mail</string>
+    <string name="reset_pin_pin_label">Enter new PIN code</string>
+    <string name="reset_pin_repeated_label">Repeat new PIN code</string>
+    <string name="reset_pin_button">Reset PIN</string>
+    <string name="reset_pin_success">PIN changed successfully</string>
+    <string name="reset_pin_error">Error occurred</string>
+
+    <string name="wallet_details_empty_transactions_list">No transactions.</string>
+    <string name="wallet_details_transaction_history">Transaction history</string>
+    <string name="wallet_details_description_label">Description</string>
+    <string name="wallet_details_issuer_label">Issuer</string>
+    <string name="wallet_details_weblink_label">Weblink</string>
+    <string name="wallet_details_agreement_label">Accept messages</string>
+
+    <string name="trade_reference_label">Reference (optional):</string>
+    <string name="trade_button_send">Send</string>
+    <string name="trade_button_request">Request</string>
+    <string name="trade_amount_view_hint">0.00</string>
+    <string name="trade_with_label">Username (optional):</string>
+    <string name="trade_error_title">Sorry!</string>
+    <string name="trade_error_not_enough_tokens">You don\'t have enough tokens\n to complete the transaction.</string>
+    <string name="trade_error_amount_empty">Amount input cannot be empty</string>
+    <string name="trade_error_insufficient_balance">Insufficient Balance</string>
+    <string name="trade_error_no_internet">No internet connection.</string>
+    <string name="trade_success_request">just sent you</string>
+    <string name="trade_success_title">Success!</string>
+    <string name="trade_success_body">You just sent</string>
+    <string name="trade_success_username">to %s</string>
+    <string name="trade_button_close">Close</string>
+    <string name="trade_token_error">Token don\'t exist</string>
+    <string name="trade_username_error">Username not found</string>
+
+    <string name="authorize_title">Authorize</string>
+    <string name="authorize_qr_code_error">QR Code cannot be generated</string>
+    <string name="authorize_tap_text">Tap QR code to refresh!</string>
+    <string name="authorize_end_timer">00:00</string>
+    <string name="authorize_initial_timer">01:00</string>
+    <string name="authorize_enter_pin">Security</string>
+    <string name="authorize_invalid_pin">Invalid PIN code</string>
+    <string name="wallets_username_error">Username not found</string>
+
+</resources>

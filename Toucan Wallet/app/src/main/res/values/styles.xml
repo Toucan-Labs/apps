@@ -1,0 +1,97 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:textViewStyle">@style/PlayTextViewFont</item>
+        <item name="android:editTextStyle">@style/PlayEditTextFont</item>
+        <item name="android:buttonStyle">@style/PlayButtonFont</item>
+    </style>
+
+    <style name="PlayTextViewFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/play</item>
+    </style>
+
+    <style name="PlayEditTextFont" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/play</item>
+    </style>
+
+    <style name="PlayButtonFont" parent="android:Widget.Button">
+        <item name="android:fontFamily">@font/play</item>
+    </style>
+
+    <style name="AppTheme.BlackAccent">
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="FormInput">
+        <item name="android:textAppearance">@style/TextNormal</item>
+        <item name="android:paddingBottom">18dp</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="FormInput.PIN">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:textColor">@color/text_pin_code_input</item>
+    </style>
+
+    <style name="Button" parent="Base.Widget.AppCompat.Button" />
+
+    <style name="ButtonBorderless" parent="Base.Widget.AppCompat.Button.Borderless" />
+
+    <style name="ButtonBorderless.CTA">
+        <item name="android:textAppearance">@style/TextNormal</item>
+        <item name="android:textColor">@color/graySecondary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonClose">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:background">@drawable/ripple_close_button</item>
+        <item name="android:src">@drawable/ic_close</item>
+    </style>
+
+    <style name="Button.Gradient">
+        <item name="android:background">@drawable/button_signup</item>
+        <item name="android:textAppearance">@style/TextH6</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:textViewStyle">@style/PlayTextViewFont</item>
+        <item name="android:buttonStyle">@style/PlayButtonFont</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_modal_dialog</item>
+    </style>
+
+    <style name="AppTheme.GraySecondaryAccent">
+        <item name="colorAccent">@color/graySecondary</item>
+    </style>
+
+    <style name="MarketingSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorSwitchThumbNormal">@color/graySwitch</item>
+    </style>
+
+</resources>

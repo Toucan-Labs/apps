@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TextTiny - 10sp -->
+    <style name="TextTiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+
+
+    <!-- TextSmall - 12sp -->
+    <style name="TextSmall">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+
+    <!-- TextNormal - 14sp -->
+    <style name="TextNormal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+
+    <!-- TextLarge - 16sp -->
+    <style name="TextLarge">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+
+    <!-- TextBig - 18sp -->
+    <style name="TextBig">
+        <item name="android:textSize">@dimen/text_size_big</item>
+    </style>
+
+
+    <!-- TextH6 - 20sp -->
+    <style name="TextH6">
+        <item name="android:textSize">@dimen/text_size_h6</item>
+    </style>
+
+
+    <!-- TextH6b - 22sp -->
+    <style name="TextH6b">
+        <item name="android:textSize">@dimen/text_size_h6b</item>
+    </style>
+
+
+    <!-- TextH5 - 24sp -->
+    <style name="TextH5">
+        <item name="android:textSize">@dimen/text_size_h5</item>
+    </style>
+
+
+    <!-- TextH5b - 28sp -->
+    <style name="TextH5b">
+        <item name="android:textSize">@dimen/text_size_h5b</item>
+    </style>
+
+    <!-- TextH4 - 32sp -->
+    <style name="TextH5c">
+        <item name="android:textSize">@dimen/text_size_h5c</item>
+    </style>
+
+    <!-- TextH4 - 34sp -->
+    <style name="TextH4">
+        <item name="android:textSize">@dimen/text_size_h4</item>
+    </style>
+
+
+    <!-- TextH4b - 40sp -->
+    <style name="TextH4b">
+        <item name="android:textSize">@dimen/text_size_h4b</item>
+    </style>
+
+</resources>

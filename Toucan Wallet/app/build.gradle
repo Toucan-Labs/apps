@@ -1,0 +1,197 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    compileSdkVersion VersionsSdk.compiledSdk
+    buildToolsVersion VersionsSdk.buildTools
+
+    defaultConfig {
+        project.ext.appName = 'ToucanWallet'
+        applicationId "com.toucanpay"
+        minSdkVersion VersionsSdk.minSdk
+        targetSdkVersion VersionsSdk.targetSdk
+        versionCode 7
+        versionName "1.07"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    signingConfigs {
+        def keystorePropertiesFile = rootProject.file("toucanpay-keystore.properties")
+        def properties = new Properties()
+        if (keystorePropertiesFile.exists()) {
+            properties.load(new FileInputStream(keystorePropertiesFile))
+        }
+        debug {
+            if (keystorePropertiesFile.exists()) {
+                storeFile = file(properties["keystoreFile"])
+                storePassword = properties["keystorePassword"]
+                keyAlias = properties["debugAlias"]
+                keyPassword = properties["debugPassword"]
+            } else {
+                storeFile = file('toucanpay.keystore')
+                storePassword = System.getenv("TOUCANPAY_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("TOUCANPAY_KEYSTORE_DEBUG_ALIAS")
+                keyPassword = System.getenv("TOUCANPAY_KEYSTORE_DEBUG_PASSWORD")
+            }
+        }
+        qa {
+            if (keystorePropertiesFile.exists()) {
+                storeFile = file(properties["keystoreFile"])
+                storePassword = properties["keystorePassword"]
+                keyAlias = properties["qaAlias"]
+                keyPassword = properties["qaPassword"]
+            } else {
+                storeFile = file('toucanpay.keystore')
+                storePassword = System.getenv("TOUCANPAY_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("TOUCANPAY_KEYSTORE_QA_ALIAS")
+                keyPassword = System.getenv("TOUCANPAY_KEYSTORE_QA_PASSWORD")
+            }
+        }
+        release {
+            if (keystorePropertiesFile.exists()) {
+                storeFile = file(properties["keystoreFile"])
+                storePassword = properties["keystorePassword"]
+                keyAlias = properties["releaseAlias"]
+                keyPassword = properties["releasePassword"]
+            } else {
+                storeFile = file('toucanpay.keystore')
+                storePassword = System.getenv("TOUCANPAY_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("TOUCANPAY_KEYSTORE_RELEASE_ALIAS")
+                keyPassword = System.getenv("TOUCANPAY_KEYSTORE_RELEASE_PASSWORD")
+            }
+        }
+        bitraiseio {
+            storeFile = file(System.getenv("HOME") + "/toucanpay.keystore")
+            storePassword = System.getenv("BITRISEIO_ANDROID_KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("BITRISEIO_ANDROID_KEYSTORE_ALIAS")
+            keyPassword = System.getenv("BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            resValue "string", "app_name", "$project.ext.appName-dev"
+            signingConfig signingConfigs.debug
+        }
+        qa {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-qa"
+            resValue "string", "app_name", "$project.ext.appName-qa"
+            signingConfig signingConfigs.bitraiseio
+        }
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "app_name", project.ext.appName
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dexOptions {
+        javaMaxHeapSize "3g"
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    lintOptions {
+        warning 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation DependenciesCore.kotlinStdLib
+
+    implementation DependenciesJetpack.androidxCoreKtxLib
+    implementation DependenciesJetpack.androidxAppcompatLib
+    implementation DependenciesJetpack.androidxConstraintLayoutLib
+    implementation DependenciesJetpack.androidxLegacySupportLib
+    implementation DependenciesJetpack.androidxMaterialLib
+
+    implementation DependenciesJetpack.androidxLifecycleExtensionsLib
+    implementation DependenciesJetpack.androidxLifecycleViewModelsLib
+
+    implementation DependenciesJetpack.androidxNavigationFragmentLib
+    implementation DependenciesJetpack.androidxNavigationUiLib
+
+    implementation DependenciesCore.koinLib
+
+    implementation DependenciesCore.retrofitLib
+    implementation DependenciesCore.retrofitGsonConverterLib
+    implementation DependenciesCore.retrofitRxJava2AdapterLib
+    implementation DependenciesCore.retrofitOkHttpLib
+    implementation DependenciesCore.retrofitOkHttpLoggingInterceptorLib
+
+    implementation DependenciesCore.rxAndroidLib
+    implementation DependenciesCore.rxKotlinLib
+    implementation DependenciesCore.rxRelayLib
+
+    implementation DependenciesJetpack.androidxRoomLib
+    kapt DependenciesJetpack.androidxRoomCompiler
+
+    implementation DependenciesOther.permissionDispatcherLib
+    kapt DependenciesOther.permissionDispatcherProcessor
+
+    implementation DependenciesOther.qrCodeReaderLib
+    implementation DependenciesOther.qrCodeGen
+
+    implementation DependenciesOther.gifLibrary
+
+    implementation group: 'org.web3j', name: 'crypto', version: '3.3.1'
+
+    // Unit tests
+    testImplementation DependenciesTesting.junitLib
+    testImplementation DependenciesTesting.mockitoLib
+    testImplementation DependenciesTesting.powerMockMockitoLib
+    testImplementation DependenciesTesting.powerMockJunitLib
+
+    // UI tests
+    androidTestImplementation DependenciesTesting.androidxTestRunnerLib
+    androidTestImplementation DependenciesTesting.espressoLib
+}
+
+task changeApkName() {
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (variant.name != "debug") {
+                def date = new Date().format("yyMMdd_HHmmss")
+                def fileName = "${project.ext.appName}_${variant.name}_${variant.versionName}_${date}.apk"
+                output.outputFileName = fileName
+            }
+        }
+    }
+}
+
+gradle.taskGraph.whenReady {
+    changeApkName
+}

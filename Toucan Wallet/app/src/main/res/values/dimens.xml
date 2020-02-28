@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_tiny">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_big">18sp</dimen>
+    <dimen name="text_size_h6">20sp</dimen>
+    <dimen name="text_size_h6b">22sp</dimen>
+    <dimen name="text_size_h5">24sp</dimen>
+    <dimen name="text_size_h5b">28sp</dimen>
+    <dimen name="text_size_h5c">32sp</dimen>
+    <dimen name="text_size_h4">34sp</dimen>
+    <dimen name="text_size_h4b">40sp</dimen>
+    <dimen name="text_size_h3">48sp</dimen>
+    <dimen name="text_size_h2">60sp</dimen>
+    <dimen name="text_size_h1">96sp</dimen>
+    <dimen name="default_padding">20dp</dimen>
+
+</resources>
