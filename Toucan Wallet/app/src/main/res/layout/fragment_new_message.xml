@@ -58,7 +58,7 @@
         android:layout_height="0dp"
         app:layout_constraintWidth_percent="0.7"
         app:layout_constraintVertical_bias="0.3"
-        android:name="com.toucanpay.ui.custom.scanner.QrCodeScannerFragment"
+        android:name="com.toucanwalletdemo.ui.custom.scanner.QrCodeScannerFragment"
         app:layout_constraintTop_toBottomOf="@+id/usernameInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

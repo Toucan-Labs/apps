@@ -4,27 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:orientation="vertical">
 
-    <com.toucanpay.ui.custom.FormInput
+    <com.toucanwalletdemo.ui.custom.FormInput
         android:id="@+id/usernameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.toucanpay.ui.custom.PINCodeInput
+    <com.toucanwalletdemo.ui.custom.PINCodeInput
         android:id="@+id/pinInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.toucanpay.ui.custom.PINCodeInput
+    <com.toucanwalletdemo.ui.custom.PINCodeInput
         android:id="@+id/pinRepeatedInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.toucanpay.ui.custom.ReferralCodeInput
+    <com.toucanwalletdemo.ui.custom.ReferralCodeInput
         android:id="@+id/referralCodeInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.toucanpay.ui.custom.FormInput
+    <com.toucanwalletdemo.ui.custom.FormInput
         android:id="@+id/emailInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/textView4"/>
 
-    <com.toucanpay.ui.custom.PinCodeVerification
+    <com.toucanwalletdemo.ui.custom.PinCodeVerification
         android:id="@+id/pinInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

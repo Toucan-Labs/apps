@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.toucanpay.ui.custom.PINCodeInput
+        <com.toucanwalletdemo.ui.custom.PINCodeInput
             android:id="@+id/pinInput"
             android:layout_width="200dp"
             android:layout_height="wrap_content"

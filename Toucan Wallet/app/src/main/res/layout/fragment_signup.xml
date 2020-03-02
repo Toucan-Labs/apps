@@ -83,7 +83,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.toucanpay.ui.components.signup.views.SignUpForm
+        <com.toucanwalletdemo.ui.components.signup.views.SignUpForm
             android:id="@+id/signUpForm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

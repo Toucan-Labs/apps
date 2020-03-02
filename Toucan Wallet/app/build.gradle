@@ -11,11 +11,11 @@ android {
 
     defaultConfig {
         project.ext.appName = 'ToucanWallet'
-        applicationId "com.toucanpay"
+        applicationId "com.toucanwalletdemo"
         minSdkVersion VersionsSdk.minSdk
         targetSdkVersion VersionsSdk.targetSdk
-        versionCode 7
-        versionName "1.07"
+        versionCode 8
+        versionName "1.08"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -51,10 +51,10 @@ android {
                 keyAlias = properties["qaAlias"]
                 keyPassword = properties["qaPassword"]
             } else {
-                storeFile = file('toucanpay.keystore')
-                storePassword = System.getenv("TOUCANPAY_KEYSTORE_PASSWORD")
-                keyAlias = System.getenv("TOUCANPAY_KEYSTORE_QA_ALIAS")
-                keyPassword = System.getenv("TOUCANPAY_KEYSTORE_QA_PASSWORD")
+                storeFile = file('C:/Users/Joel/Documents/GitHub/apps/key.jks')
+                storePassword = "507422"
+                keyAlias = "key0"
+                keyPassword = "507422"
             }
         }
         release {
@@ -71,10 +71,10 @@ android {
             }
         }
         bitraiseio {
-            storeFile = file(System.getenv("HOME") + "/toucanpay.keystore")
-            storePassword = System.getenv("BITRISEIO_ANDROID_KEYSTORE_PASSWORD")
-            keyAlias = System.getenv("BITRISEIO_ANDROID_KEYSTORE_ALIAS")
-            keyPassword = System.getenv("BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD")
+            storeFile = file('C:/Users/Joel/Documents/GitHub/apps/key.jks')
+            storePassword = "507422"
+            keyAlias = "key0"
+            keyPassword = "507422"
         }
     }
 

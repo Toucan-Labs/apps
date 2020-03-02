@@ -98,7 +98,7 @@
     <string name="wallets_button_pos"></string>
     <string name="wallets_button_back">Back to Wallets</string>
 
-    <string name="toucan_backend_url">https://supermoney-toucan.herokuapp.com/</string>
+    <string name="toucan_backend_url">https://toucan-wallet-demo.herokuapp.com/</string>
 
     <string name="change_pin_title">Reset PIN</string>
     <string name="reset_pin_inbox">We emailed you a new PIN.\nPlease check your inbox!</string>

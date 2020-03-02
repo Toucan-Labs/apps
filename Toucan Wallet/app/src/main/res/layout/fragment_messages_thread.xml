@@ -37,7 +37,7 @@
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
         android:stackFromBottom="true"
-        app:layoutManager="com.toucanpay.utils.CustomLinearLayoutManager"
+        app:layoutManager="com.toucanwalletdemo.utils.CustomLinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/messageInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

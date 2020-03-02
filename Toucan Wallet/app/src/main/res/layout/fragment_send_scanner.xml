@@ -8,6 +8,6 @@
         android:id="@+id/qrCodeScannerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.toucanpay.ui.custom.scanner.QrCodeScannerFragment"/>
+        android:name="com.toucanwalletdemo.ui.custom.scanner.QrCodeScannerFragment"/>
 
 </FrameLayout>

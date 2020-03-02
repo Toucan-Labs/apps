@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/textView4"/>
 
-    <com.toucanpay.ui.components.changepin.view.ChangePinForm
+    <com.toucanwalletdemo.ui.components.changepin.view.ChangePinForm
         android:id="@+id/changePinForm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -40,7 +40,7 @@
                 app:layout_constraintVertical_bias="0.0"
                 app:layout_constraintVertical_chainStyle="packed" />
 
-            <com.toucanpay.ui.components.trade.view.TradeAmountView
+            <com.toucanwalletdemo.ui.components.trade.view.TradeAmountView
                 android:id="@+id/tradeAmountView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

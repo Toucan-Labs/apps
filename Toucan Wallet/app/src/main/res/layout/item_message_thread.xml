@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="divider,dateText,divider2" />
 
-    <com.toucanpay.ui.components.messagesthread.views.SingleMessageView
+    <com.toucanwalletdemo.ui.components.messagesthread.views.SingleMessageView
         android:id="@+id/messageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

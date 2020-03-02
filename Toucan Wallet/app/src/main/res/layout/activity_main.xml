@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="@+id/mainBottomBar"
         android:layout_marginTop="0dp"/>
 
-    <com.toucanpay.ui.custom.bottombar.MainBottomBar
+    <com.toucanwalletdemo.ui.custom.bottombar.MainBottomBar
         android:id="@+id/mainBottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

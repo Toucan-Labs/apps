@@ -2,14 +2,14 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.toucanpay">
+    package="com.toucanwalletdemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".ToucanPayApp"
+        android:name="com.toucanwalletdemo.ToucanPayApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher_icon"
         android:label="@string/app_name"
@@ -21,7 +21,7 @@
         tools:replace="android:allowBackup"
         tools:targetApi="n">
         <activity
-            android:name=".ui.components.MainActivity"
+            android:name="com.toucanwalletdemo.ui.components.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".utils.logout.OnLogoutUserService"
+            android:name="com.toucanwalletdemo.utils.logout.OnLogoutUserService"
             android:stopWithTask="false" />
         <meta-data
             android:name="preloaded_fonts"
